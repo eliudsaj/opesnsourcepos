@@ -89,9 +89,9 @@ $(document).ready(function()
 				<td class="meta-head"><?php echo $this->lang->line('common_date'); ?></td>
 				<td><?php echo $transaction_date; ?></td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<td class="meta-head"><?php echo $this->lang->line('sales_invoice_total'); ?></td>
-				<td><?php echo to_currency($total); ?></td>
+				<td><?php echo to_currency($total); ?></td>-->
 			</tr>
 		</table>
 	</div>
@@ -111,7 +111,7 @@ $(document).ready(function()
 			?>
 			<th><?php echo $this->lang->line('sales_item_name'); ?></th>
 			<th><?php echo $this->lang->line('sales_quantity'); ?></th>
-			<th><?php echo $this->lang->line('sales_price'); ?></th>
+			<!--<th><?php echo $this->lang->line('sales_price'); ?></th>
 			<th><?php echo $this->lang->line('sales_discount'); ?></th>
 			<?php
 			if($discount > 0)
@@ -122,7 +122,7 @@ $(document).ready(function()
 			<?php
 			}
 			?>
-			<th><?php echo $this->lang->line('sales_total'); ?></th>
+			<th><?php echo $this->lang->line('sales_total'); ?></th>-->
 		</tr>
 
 		<?php
@@ -138,13 +138,13 @@ $(document).ready(function()
 					<?php endif; ?>
 					<td class="item-name"><?php echo ($item['is_serialized'] || $item['allow_alt_description']) && !empty($item['description']) ? $item['description'] : $item['name'] . ' ' . $item['attribute_values']; ?></td>
 					<td style='text-align:center;'><?php echo to_quantity_decimals($item['quantity']); ?></td>
-					<td><?php echo to_currency($item['price']); ?></td>
+					<!--<td><?php echo to_currency($item['price']); ?></td>
 					<td style='text-align:center;'><?php echo ($item['discount_type']==FIXED)?to_currency($item['discount']):to_decimals($item['discount']) . '%';?></td>
 					<?php if($discount > 0): ?>
 					<td style='text-align:center;'><?php echo to_currency($item['discounted_total'] / $item['quantity']); ?></td>
 					<?php endif; ?>
 					<td style='border-right: solid 1px; text-align:right;'><?php echo to_currency($item['discounted_total']); ?></td>
-				</tr>
+				</tr>-->
 				<?php
 				if($item['is_serialized'])
 				{
@@ -159,7 +159,7 @@ $(document).ready(function()
 		}
 		?>
 
-		<tr>
+		<!--<tr>
 			<td class="blank" colspan="<?php echo $invoice_columns; ?>" align="center"><?php echo '&nbsp;'; ?></td>
 		</tr>
 
@@ -226,7 +226,7 @@ $(document).ready(function()
 		</tr>
 		<?php
 		}
-		?>
+		?>-->
 
 	</table>
 
@@ -239,10 +239,10 @@ $(document).ready(function()
 			</h5>
 			<div style='padding:2%;'><?php echo nl2br($this->config->item('return_policy')); ?></div>
 		</div>
-		<div id='barcode'>
+		<!--<div id='barcode'>
 			<img style='padding-top:4%;' src='data:image/png;base64,<?php echo $barcode; ?>' /><br>
 			<?php echo $sale_id; ?>
-		</div>
+		</div>-->
 	</div>
 </div>
 
